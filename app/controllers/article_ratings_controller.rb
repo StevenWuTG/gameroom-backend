@@ -1,0 +1,2 @@
+class ArticleRatingsController < ApplicationController
+end
