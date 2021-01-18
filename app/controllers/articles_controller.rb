@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+    skip_before_action :authorized
+
     def create
         @article = Article.create(article_params)
         if @article.valid?
