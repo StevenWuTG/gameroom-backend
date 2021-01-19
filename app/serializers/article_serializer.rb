@@ -1,5 +1,5 @@
 class ArticleSerializer < ActiveModel::Serializer
-  attributes :id, :content, :video_url, :img_url,:author
+  attributes :id,:title, :content, :author,:img_url, :video_url
 
   has_many :article_ratings
   has_many :users, through: :article_ratings

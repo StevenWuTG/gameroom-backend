@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_01_14_162523) do
   end
 
   create_table "articles", force: :cascade do |t|
+    t.string "title"
     t.string "content"
     t.string "video_url"
     t.string "img_url"
