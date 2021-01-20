@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
     has_many :article_ratings
-    belongs_to :game
+    belongs_to :game, optional: true
     has_many :users, through: :article_ratings
 
 end
