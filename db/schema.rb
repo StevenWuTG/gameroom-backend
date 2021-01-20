@@ -50,6 +50,10 @@ ActiveRecord::Schema.define(version: 2021_01_14_162523) do
   create_table "games", force: :cascade do |t|
     t.string "title"
     t.string "genre"
+    t.string "img_url"
+    t.string "img_url2"
+    t.string "img_url3"
+    t.string "video_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -60,6 +64,7 @@ ActiveRecord::Schema.define(version: 2021_01_14_162523) do
     t.string "bio"
     t.string "avatar"
     t.string "email"
+    t.boolean "admin"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

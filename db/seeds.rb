@@ -7,31 +7,35 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-puts "destroying all seeds"
+puts "destroying articleRating seeds"
 
 ArticleRating.destroy_all
+puts "destroying gameRating seeds"
 GameRating.destroy_all
+puts "destroying user seeds"
 User.destroy_all
-Game.destroy_all
+puts "destroying article seeds"
 Article.destroy_all
+puts "destroying game seeds"
+Game.destroy_all
 
 puts "creating User data"
 
-steven = User.create!(username: "steven420", password:"123",avatar: "https://img.cinemablend.com/filter:scale/cb/4/4/f/e/1/8/44fe1892ceede1a11f0d241fec3ec27a7d18c9bb66a041cd60b347d014b645de.jpg?mw=600", email:"steven@email.com")
-alice = User.create!(username: "alice420", password:"123",avatar: "https://pm1.narvii.com/6636/ddaf1c402f3767d7c934aac8520aa12c023fd31c_00.jpg", email:"alice@email.com")
+steven = User.create!(admin: true ,username: "steven420", password:"123",avatar: "https://img.cinemablend.com/filter:scale/cb/4/4/f/e/1/8/44fe1892ceede1a11f0d241fec3ec27a7d18c9bb66a041cd60b347d014b645de.jpg?mw=600", email:"steven@email.com")
+alice = User.create!(admin: false ,username: "alice420", password:"123",avatar: "https://pm1.narvii.com/6636/ddaf1c402f3767d7c934aac8520aa12c023fd31c_00.jpg", email:"alice@email.com")
 
 puts "creating Game data"
 
-game1 = Game.create!(title: "Fallout: New Vegas", genre: "RPG" )
-game2 = Game.create!(title: "Elder Scrolls V: Skyrim", genre: "RPG" )
-game3 = Game.create!(title: "OverCooked 2", genre: "Party" )
+game1 = Game.create!(title: "Fallout: New Vegas", genre: "RPG", img_url: "https://cdn.mos.cms.futurecdn.net/Mv895k5GNQazrGKbLVyk66.jpg" )
+game2 = Game.create!(title: "Elder Scrolls V: Skyrim", genre: "RPG", img_url:"https://i0.wp.com/wallur.com/wp-content/uploads/2016/12/skyrim-background-9.jpg?fit=1920%2C1080" )
+game3 = Game.create!(title: "CyberPunk", genre: "RPG", img_url:"https://images.hdqwalls.com/download/4k-cyberpunk-2077-ps-game-sr-1920x1080.jpg" )
 
 puts "creating GameRating data"
 
 game_rating1 = GameRating.create!(star: 5, user:steven, game:game1)
 game_rating2 = GameRating.create!(star: 5, user:steven, game:game2)
 game_rating3 = GameRating.create!(star: 5, user:steven, game:game3)
-game_rating4 = GameRating.create!(star: 5, user:alice, game:game3)
+game_rating4 = GameRating.create!(star: 1, user:alice, game:game3)
 
 puts "creating Article data"
 

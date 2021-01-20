@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :username, :password_digest, :bio, :avatar, :email
+  attributes :id, :username, :password_digest, :bio, :avatar, :email, :admin
 
   has_many :article_ratings
     has_many :articles, through: :article_ratings
