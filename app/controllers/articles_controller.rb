@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
     def create
         @article = Article.create(article_params)
         if @article.valid?
-            render json: @article,  except: [:created_at, :updated_at]
+            render json: @article,  except: [ :updated_at]
         else
             render json: {errors: @article.errors} 
         end 
@@ -12,12 +12,12 @@ class ArticlesController < ApplicationController
 
     def index
         @articles = Article.all
-        render json: @articles, except: [:created_at, :updated_at]
+        render json: @articles, except: [ :updated_at]
     end
 
     def show
         @article = Article.find(params[:id])
-        render json: @article, except: [:created_at, :updated_at]
+        render json: @article, except: [ :updated_at]
     end
 
     def update
