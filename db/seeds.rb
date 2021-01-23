@@ -26,7 +26,7 @@ alice = User.create!(admin: false ,username: "alice420", password:"123",avatar: 
 
 puts "creating Game data"
 
-game1 = Game.create!(title: "Fallout: New Vegas", genre: "RPG", img_url: "https://cdn.mos.cms.futurecdn.net/Mv895k5GNQazrGKbLVyk66.jpg" )
+game1 = Game.create!(title: "Fallout: New Vegas", genre: "RPG", img_url: "https://cdn.mos.cms.futurecdn.net/Mv895k5GNQazrGKbLVyk66.jpg", video_url:"https://www.youtube.com/watch?v=fMXGc36YBbA", description:"Fallout: New Vegas is a post-apocalyptic role-playing video game developed by Obsidian Entertainment and published by Bethesda Softworks. While New Vegas is not a direct sequel, it uses the same engine and style as Fallout 3, and many of its developers worked on previous Fallout games at Black Isle Studios. It is the fourth major installment in the Fallout series and the sixth overall. The game is set primarily in a post-apocalyptic Nevada, California, Arizona and Utah." , publisher: "Bethesda Softworks")
 game2 = Game.create!(title: "Elder Scrolls V: Skyrim", genre: "RPG", img_url:"https://i0.wp.com/wallur.com/wp-content/uploads/2016/12/skyrim-background-9.jpg?fit=1920%2C1080" )
 game3 = Game.create!(title: "CyberPunk", genre: "RPG", img_url:"https://images.hdqwalls.com/download/4k-cyberpunk-2077-ps-game-sr-1920x1080.jpg" )
 
@@ -39,7 +39,7 @@ game_rating4 = GameRating.create!(star: 1, user:alice, game:game3)
 
 puts "creating Article data"
 
-article1 = Article.create!( title:"article 1 title", game: game1, content: "first article -steven", author: steven.username, img_url:"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/642b3ef4-4c03-4e93-a4eb-80c8146bee5d/d4jbdkh-59c39f42-eb4c-48d8-b06e-5f9877d4a06d.png/v1/fill/w_714,h_742,q_80,strp/random_pikachu_by_ieaka_d4jbdkh-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD03NDIiLCJwYXRoIjoiXC9mXC82NDJiM2VmNC00YzAzLTRlOTMtYTRlYi04MGM4MTQ2YmVlNWRcL2Q0amJka2gtNTljMzlmNDItZWI0Yy00OGQ4LWIwNmUtNWY5ODc3ZDRhMDZkLnBuZyIsIndpZHRoIjoiPD03MTQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.U6Cgp6wtoMep6HAjDsJ1lb4qOqlfQokhkYN7zJxvIDs" )
+article1 = Article.create!( title:"article 1 title", game: game1, content: "first article -steven", author: steven.username, img_url:"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/642b3ef4-4c03-4e93-a4eb-80c8146bee5d/d4jbdkh-59c39f42-eb4c-48d8-b06e-5f9877d4a06d.png/v1/fill/w_714,h_742,q_80,strp/random_pikachu_by_ieaka_d4jbdkh-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD03NDIiLCJwYXRoIjoiXC9mXC82NDJiM2VmNC00YzAzLTRlOTMtYTRlYi04MGM4MTQ2YmVlNWRcL2Q0amJka2gtNTljMzlmNDItZWI0Yy00OGQ4LWIwNmUtNWY5ODc3ZDRhMDZkLnBuZyIsIndpZHRoIjoiPD03MTQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.U6Cgp6wtoMep6HAjDsJ1lb4qOqlfQokhkYN7zJxvIDs", video_url: "https://www.youtube.com/watch?v=wZyYwjNZ4ls&t=103s" )
 article2 = Article.create!(title:"article 2 title", game: game2, content: "second article -steven", author: steven.username, img_url:"https://www.mandysam.com/img/random.jpg" )
 article3 = Article.create!(title:"article 3 title",game: game1, content: "third article", author: alice.username, img_url:"https://www.brightful.me/content/images/2020/07/david-kovalenko-G85VuTpw6jg-unsplash.jpg" )
 

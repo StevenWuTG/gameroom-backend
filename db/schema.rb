@@ -54,6 +54,8 @@ ActiveRecord::Schema.define(version: 2021_01_14_162523) do
     t.string "img_url2"
     t.string "img_url3"
     t.string "video_url"
+    t.string "description"
+    t.string "publisher"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

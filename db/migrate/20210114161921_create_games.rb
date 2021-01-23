@@ -7,8 +7,9 @@ class CreateGames < ActiveRecord::Migration[6.0]
       t.string :img_url2
       t.string :img_url3
       t.string :video_url
-
-
+      t.string :description
+      t.string :publisher
+      
       t.timestamps
     end
   end
