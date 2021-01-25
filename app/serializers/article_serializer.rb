@@ -3,6 +3,7 @@ class ArticleSerializer < ActiveModel::Serializer
 
   has_many :article_ratings
   has_many :article_comments
+  has_many :commenters, through: :article_comments, class_name: "User"
   has_many :users, through: :article_ratings
   belongs_to :game, optional: true
 

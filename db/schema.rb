@@ -27,12 +27,12 @@ ActiveRecord::Schema.define(version: 2021_01_25_152725) do
 
   create_table "article_ratings", force: :cascade do |t|
     t.integer "star"
-    t.bigint "user_id", null: false
+    t.bigint "rater_id"
     t.bigint "article_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["article_id"], name: "index_article_ratings_on_article_id"
-    t.index ["user_id"], name: "index_article_ratings_on_user_id"
+    t.index ["rater_id"], name: "index_article_ratings_on_rater_id"
   end
 
   create_table "articles", force: :cascade do |t|
@@ -83,7 +83,130 @@ ActiveRecord::Schema.define(version: 2021_01_25_152725) do
 
   add_foreign_key "article_comments", "articles"
   add_foreign_key "article_ratings", "articles"
-  add_foreign_key "article_ratings", "users"
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
   add_foreign_key "articles", "games"
   add_foreign_key "game_ratings", "games"
   add_foreign_key "game_ratings", "users"
