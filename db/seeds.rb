@@ -52,5 +52,6 @@ article_rating4 = ArticleRating.create!(star: 5, user:alice, article:article2)
 
 puts "creating ArticleComment data"
 
-article_comment1 = ArticleComment.create!(content:"randome comment", user:alice, article:article1) 
+article_comment1 = ArticleComment.create!(content:"randome comment 1", user:alice, article:article1) 
+article_comment1 = ArticleComment.create!(content:"randome comment 2", user:steven, article:article3) 
 
