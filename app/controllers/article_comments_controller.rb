@@ -39,6 +39,6 @@ class ArticleCommentsController < ApplicationController
     private
 
     def article_params
-        params.require(:article_rating).permit(:star , :user_id, :article_id)
+        params.require(:article_rating).permit(:star , :commenter_id, :article_id)
     end
 end

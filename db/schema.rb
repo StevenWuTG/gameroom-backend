@@ -18,11 +18,11 @@ ActiveRecord::Schema.define(version: 2021_01_25_152725) do
   create_table "article_comments", force: :cascade do |t|
     t.string "content"
     t.bigint "article_id", null: false
-    t.bigint "user_id", null: false
+    t.bigint "commenter_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["article_id"], name: "index_article_comments_on_article_id"
-    t.index ["user_id"], name: "index_article_comments_on_user_id"
+    t.index ["commenter_id"], name: "index_article_comments_on_commenter_id"
   end
 
   create_table "article_ratings", force: :cascade do |t|
@@ -82,7 +82,6 @@ ActiveRecord::Schema.define(version: 2021_01_25_152725) do
   end
 
   add_foreign_key "article_comments", "articles"
-  add_foreign_key "article_comments", "users"
   add_foreign_key "article_ratings", "articles"
   add_foreign_key "article_ratings", "users"
   add_foreign_key "articles", "games"
