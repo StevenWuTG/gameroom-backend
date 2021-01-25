@@ -16,12 +16,12 @@ class ArticleRatingsController < ApplicationController
     end
 
     def show
-        @articleRating = Article.find(params[:id])
+        @articleRating = ArticleRating.find(params[:id])
         render json: @articleRating, except: [:created_at, :updated_at]
     end
 
     def update
-        @articleRating = Article.find(params[:id])
+        @articleRating = ArticleRating.find(params[:id])
         if (@articleRating.update!(article_params))
             render json: @articleRating
         else
@@ -30,8 +30,8 @@ class ArticleRatingsController < ApplicationController
     end 
 
     def destroy
-        @allarticles = Article.all
-        @articleRating = Article.find(params[:id])
+        @allarticles = ArticleRating.all
+        @articleRating = ArticleRating.find(params[:id])
         @articleRating.destroy
         render json: @allarticles
     end
@@ -39,6 +39,6 @@ class ArticleRatingsController < ApplicationController
     private
 
     def article_params
-        params.require(:article_rating).permit(:star , :user_id, :article_id)
+        params.require(:article_rating).permit(:content , :user_id, :article_id)
     end
 end

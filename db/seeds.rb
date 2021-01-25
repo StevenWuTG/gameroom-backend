@@ -49,3 +49,8 @@ article_rating1 = ArticleRating.create!(star: 5, user:steven, article:article2)
 article_rating2 = ArticleRating.create!(star: 5, user:steven, article:article1)
 article_rating3 = ArticleRating.create!(star: 5, user:alice, article:article1)
 article_rating4 = ArticleRating.create!(star: 5, user:alice, article:article2)
+
+puts "creating ArticleComment data"
+
+article_comment1 = ArticleComment.create!(content:"randome comment", user:alice, article:article1) 
+
