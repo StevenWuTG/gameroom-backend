@@ -39,6 +39,6 @@ class ArticleRatingsController < ApplicationController
     private
 
     def article_params
-        params.require(:article_rating).permit(:content , :user_id, :article_id)
+        params.require(:article_rating).permit(:content , :rater_id, :article_id, :star)
     end
 end
