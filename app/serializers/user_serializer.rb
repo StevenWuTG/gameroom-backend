@@ -11,4 +11,6 @@ class UserSerializer < ActiveModel::Serializer
     # has_many :articles, through: :article_ratings
     # has_many :game_ratings, :dependent => :delete_all
     # has_many :games, through: :game_ratings
+    has_many :followings
+    has_many :follows, through: :followings, class_name: "User"
 end

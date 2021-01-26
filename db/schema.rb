@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_25_152725) do
+ActiveRecord::Schema.define(version: 2021_01_26_152425) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,15 @@ ActiveRecord::Schema.define(version: 2021_01_25_152725) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["author_id"], name: "index_articles_on_author_id"
     t.index ["game_id"], name: "index_articles_on_game_id"
+  end
+
+  create_table "followings", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "follow_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["follow_id"], name: "index_followings_on_follow_id"
+    t.index ["user_id"], name: "index_followings_on_user_id"
   end
 
   create_table "game_ratings", force: :cascade do |t|
@@ -85,6 +94,7 @@ ActiveRecord::Schema.define(version: 2021_01_25_152725) do
   add_foreign_key "article_comments", "articles"
   add_foreign_key "article_ratings", "articles"
   add_foreign_key "articles", "games"
+  add_foreign_key "followings", "users"
   add_foreign_key "game_ratings", "games"
   add_foreign_key "game_ratings", "users"
 end

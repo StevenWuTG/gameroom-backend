@@ -55,3 +55,6 @@ puts "creating ArticleComment data"
 article_comment1 = ArticleComment.create!(content:"randome comment 1", commenter:alice, article:article1) 
 article_comment1 = ArticleComment.create!(content:"randome comment 2", commenter:steven, article:article3) 
 
+puts "creating Following data"
+
+# followering1 = Following.create!(user:steven , follow:alice)
