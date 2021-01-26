@@ -23,6 +23,7 @@ puts "creating User data"
 
 steven = User.create!(admin: true ,username: "steven420", password:"123",avatar: "https://img.cinemablend.com/filter:scale/cb/4/4/f/e/1/8/44fe1892ceede1a11f0d241fec3ec27a7d18c9bb66a041cd60b347d014b645de.jpg?mw=600", email:"steven@email.com")
 alice = User.create!(admin: false ,username: "alice420", password:"123",avatar: "https://pm1.narvii.com/6636/ddaf1c402f3767d7c934aac8520aa12c023fd31c_00.jpg", email:"alice@email.com")
+brian = User.create!(admin: false ,username: "brian420", password:"123",avatar: "https://pm1.narvii.com/6636/ddaf1c402f3767d7c934aac8520aa12c023fd31c_00.jpg", email:"alice@email.com")
 
 puts "creating Game data"
 

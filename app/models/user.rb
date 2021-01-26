@@ -11,4 +11,6 @@ class User < ApplicationRecord
 
     has_many :followings, :dependent => :delete_all
     has_many :follows, through: :followings, class_name: "User"
+
+    
 end
