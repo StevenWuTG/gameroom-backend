@@ -84,3 +84,7 @@ ActiveRecord::Schema.define(version: 2021_01_25_152725) do
 
   add_foreign_key "article_comments", "articles"
   add_foreign_key "article_ratings", "articles"
+  add_foreign_key "articles", "games"
+  add_foreign_key "game_ratings", "games"
+  add_foreign_key "game_ratings", "users"
+end
