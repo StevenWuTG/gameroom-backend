@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     has_secure_password
     
-    has_many :articles
+    has_many :articles, foreign_key: "author_id"
     has_many :article_ratings,through: :articles, :dependent => :delete_all
     has_many :article_comments,through: :articles, :dependent => :delete_all
     # has_many :commenters, through: :article_comments, class_name: "User"
