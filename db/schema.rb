@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 2021_01_26_152425) do
     t.string "video_url"
     t.string "description"
     t.string "publisher"
+    t.date "release_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

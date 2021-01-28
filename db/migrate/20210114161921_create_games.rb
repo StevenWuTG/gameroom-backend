@@ -9,6 +9,7 @@ class CreateGames < ActiveRecord::Migration[6.0]
       t.string :video_url
       t.string :description
       t.string :publisher
+      t.date :release_date
       
       t.timestamps
     end
